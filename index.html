@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iseng Berhadiah</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#" class="goOut">Dolan</a></li>
+                <li><a href="#" class="goOut">Nongkrong</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            Ning Umah
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('.goOut').click(function () {
+            Swal.mixin({
+                confirmButtonText: 'Angger pengen metu',
+                showCancelButton: true,
+                hideProgressSteps: true
+            }).queue([{
+                    icon: 'error',
+                    html: '<h3>Dirumah bae</h3>'
+                },
+                {
+                    input: 'text',
+                    html: '<h3>Mau kemana sih ?</h3>',
+                    confirmButtonText: 'Jawab Emak',
+                }
+            ]).then((result) => {
+                Swal.fire({
+                    icon: 'error',
+                    html: '<p class="tampol">BALIK KE KAMAR SEKARANG !!!</p><p class="tampol bold red">GW TAMPOL LO</p>',
+                    showConfirmButton: false
+                })
+            })
+
+
+        });
+    });
+</script>
